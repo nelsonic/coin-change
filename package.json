@@ -1,0 +1,26 @@
+{
+  "name": "coin-change",
+  "version": "1.0.0",
+  "description": "node.js solution to coin change problem",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nelsonic/coin-change.git"
+  },
+  "keywords": [
+    "coin",
+    "change",
+    "calculator",
+    "node.js"
+  ],
+  "author": "@nelsonic <contact.nelsonic@gmail.com> (https://github.com/nelsonic)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nelsonic/coin-change/issues"
+  },
+  "homepage": "https://github.com/nelsonic/coin-change"
+}
