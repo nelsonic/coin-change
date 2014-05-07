@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/nelsonic/coin-change",
   "devDependencies": {
+    "istanbul": "^0.3.2",
     "tape": "^3.0.1"
   }
 }
