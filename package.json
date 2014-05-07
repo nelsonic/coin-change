@@ -4,8 +4,9 @@
   "description": "node.js solution to coin change problem",
   "main": "index.js",
   "scripts": {
-    "test": "lab",
-    "start": "node server.js"
+    "test": "istanbul cover ./node_modules/tape/bin/tape ./test.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
+    "start": "node server.js",
+    "jshint": "jshint -c .jshintrc --exclude-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/nelsonic/coin-change/issues"
   },
-  "homepage": "https://github.com/nelsonic/coin-change"
+  "homepage": "https://github.com/nelsonic/coin-change",
+  "devDependencies": {
+    "tape": "^3.0.1"
+  }
 }
