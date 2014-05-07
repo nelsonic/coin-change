@@ -1,20 +1,26 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'test' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'coverage' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
-4 error Failed to parse json
-4 error Unexpected token }
-5 error File: /Users/n/play/coin-change/package.json
-6 error Failed to parse package.json data.
-6 error package.json must be actual JSON, not just JavaScript.
-6 error
-6 error This is not a bug in npm.
-6 error Tell the package author to fix their package.json file. JSON.parse
-7 error System Darwin 13.4.0
-8 error command "node" "/usr/local/bin/npm" "test"
-9 error cwd /Users/n/play/coin-change
-10 error node -v v0.10.32
-11 error npm -v 1.4.28
-12 error file /Users/n/play/coin-change/package.json
-13 error code EJSONPARSE
-14 verbose exit [ 1, true ]
+4 verbose run-script [ 'precoverage', 'coverage', 'postcoverage' ]
+5 info precoverage coin-change@1.0.0
+6 info coverage coin-change@1.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info coin-change@1.0.0 Failed to exec coverage script
+9 error coin-change@1.0.0 coverage: `cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js`
+9 error Exit status 8
+10 error Failed at the coin-change@1.0.0 coverage script.
+10 error This is most likely a problem with the coin-change package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+10 error You can get their info via:
+10 error     npm owner ls coin-change
+10 error There is likely additional logging output above.
+11 error System Darwin 13.4.0
+12 error command "node" "/usr/local/bin/npm" "run" "coverage"
+13 error cwd /Users/n/play/coin-change
+14 error node -v v0.10.32
+15 error npm -v 1.4.28
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]
