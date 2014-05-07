@@ -6,7 +6,9 @@
   "scripts": {
     "test": "istanbul cover ./node_modules/tape/bin/tape ./test.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "start": "node server.js",
-    "jshint": "jshint -c .jshintrc --exclude-path .gitignore ."
+    "jshint": "jshint -c .jshintrc --exclude-path .gitignore",
+    "coverage":"cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   },
   "homepage": "https://github.com/nelsonic/coin-change",
   "devDependencies": {
+    "coveralls": "^2.11.2",
     "istanbul": "^0.3.2",
     "tape": "^3.0.1"
   }
