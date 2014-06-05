@@ -4,7 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/nelsonic/coin-change.png)](https://codeclimate.com/github/nelsonic/coin-change)
 [![Dependencies](https://david-dm.org/nelsonic/coin-change.png?theme=shields.io)](https://david-dm.org/nelsonic/coin-change)
 [![devDependency Status](https://david-dm.org/nelsonic/coin-change/dev-status.svg)](https://david-dm.org/nelsonic/coin-change#info=devDependencies)
-[![NPM version](https://badge.fury.io/js/coin-change.png)](https://npmjs.org/pcoin-changekage/coin-change)
+[![NPM version](https://badge.fury.io/js/coin-change.png)](https://npmjs.org/package/coin-change)
 
 ## Problem
 
