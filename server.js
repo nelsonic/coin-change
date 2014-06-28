@@ -3,7 +3,6 @@ var http = require('http');
 var url  = require('url');
 var qs   = require('querystring');
 var c    = require('./index');
-var tooLong = Number.MAX_SAFE_INTEGER; // JS can't handle big numbers.
 
 http.createServer(function (req, res) {
   var q = qs.parse(url.parse(req.url).query);
