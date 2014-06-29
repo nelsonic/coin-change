@@ -1,6 +1,6 @@
 var C = {};  // C Object simplifies exporting the module
 var coins = [5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
-var tooBig = Number.MAX_SAFE_INTEGER; // JS can't handle big numbers.
+var tooBig = 10000000; // nobody needs change for more than £10M
 C.noZeroErrMsg = 'total/paid cannot be zero';
 C.noChangeErrMsg = 'no change';
 C.tooBigErrMsg = 'total/paid are too big. please try again';
@@ -14,14 +14,17 @@ C.tooBigErrMsg = 'total/paid are too big. please try again';
 C.getChange = function (totalPayable, cashPaid, callback) {
     'use strict';
 
+// console.log(totalPayable +' | ' +cashPaid);
+
+
     if(totalPayable === 0 || isNaN(totalPayable) || isNaN(cashPaid)) {
       callback(C.noZeroErrMsg, []);
     }
 
-    // if(totalPayable > Number.MAX_SAFE_INTEGER
-    //   || cashPaid > Number.MAX_SAFE_INTEGER) {
-    //   callback(C.tooBigErrMsg, []);
-    // }
+    if(totalPayable > tooBig
+      || cashPaid > tooBig) {
+      callback(C.tooBigErrMsg, []);
+    }
 
     if(cashPaid - totalPayable === 0 || totalPayable - cashPaid === 0) {
       callback(C.noChangeErrMsg, []);
