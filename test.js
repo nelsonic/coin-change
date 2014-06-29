@@ -17,7 +17,7 @@ test('both values undefined', function (t) {
   });
 });
 
-test('total=null&paid=null', function (t) {
+test('Null values should not be permitted: total=null&paid=null', function (t) {
   C.getChange(null, null, function (err, change) {
     t.equal(err, C.noChangeErrMsg);
     t.deepEqual(change, []);
@@ -41,10 +41,10 @@ test('Test change (difference) is Zero', function (t) {
   });
 });
 
-test('test large numbers', function (t) {
+test('Large numbers should be rejected', function (t) {
   var tooBig = Math.pow(2, 53);
   console.log(tooBig);
-  C.getChange(tooBig, tooBig-2, function (err, change) {
+  C.getChange(tooBig, tooBig - 2, function (err, change) {
     t.equal(err, C.tooBigErrMsg);
     t.deepEqual(change, []);
     t.end();
